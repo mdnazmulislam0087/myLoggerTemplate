@@ -1,0 +1,2 @@
+# myLoggerTemplate
+myLoggerTemplate
