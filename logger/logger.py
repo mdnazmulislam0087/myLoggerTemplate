@@ -9,7 +9,8 @@ def setup_applevel_logger(logger_name = LOGGER_NAME,
     logger = logging.getLogger(logger_name)
     logger.setLevel(logging.DEBUG if is_debug else logging.INFO)
     format_log="%(asctime)s | %(name)s | %(levelname)s | %(message)s"
-    formatter = logging.Formatter(format_log)
+    date_fmt = "%a %d %b %Y %H:%M:%S"
+    formatter = logging.Formatter(format_log, date_fmt)
 
     sh = logging.StreamHandler(sys.stdout)
     sh.setFormatter(formatter)
